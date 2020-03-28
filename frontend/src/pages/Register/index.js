@@ -53,7 +53,7 @@ export default function Register() {
 
                     <Link className="back-link" to="/">
                         <FaArrowLeft size={16} color="#E02041" />
-                    Não tenho cadastro
+                    Voltar para Home
                 </Link>
 
                 </section>
