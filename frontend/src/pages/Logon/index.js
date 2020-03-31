@@ -5,8 +5,8 @@ import { FaCloud } from 'react-icons/fa';
 import api from '../../services/api';
 
 import './styles.css';
-// import herosImg from '../../assets'
-// import logoImg from '../../assets'
+import hero from '../../assets/hero.png'
+import logo from '../../assets'
 
 export default function Logon() {
 
@@ -34,7 +34,7 @@ export default function Logon() {
     return (
         <div className="logon-container">
             <section className="form">
-            <img src="" alt="Be The Hero" />
+            <img src={logo} alt="Be The Hero" />
             {/* logoImg */}
 
             <form onSubmit={handleLogin}>
@@ -54,7 +54,7 @@ export default function Logon() {
 
             </section>
 
-            <img src="" alt="Heroes" /> 
+            <img src={hero} alt="Heroes" /> 
             {/* herosImg */}
         </div>
     );
