@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import { FaCloud } from 'react-icons/fa';
+import { FaArrowRight } from 'react-icons/fa';
 
 import api from '../../services/api';
 
 import './styles.css';
 import hero from '../../assets/hero.png'
-import logo from '../../assets'
+// import logo from '../../assets/logo.png'
 
 export default function Logon() {
 
@@ -34,7 +34,7 @@ export default function Logon() {
     return (
         <div className="logon-container">
             <section className="form">
-            <img src={logo} alt="Be The Hero" />
+            <img className="invisible" src="" alt="Be The Hero"/>
             {/* logoImg */}
 
             <form onSubmit={handleLogin}>
@@ -47,7 +47,7 @@ export default function Logon() {
                 <button className="button" type="submit">Entrar</button>
 
                 <Link className="back-link" to="/register">
-                    <FaCloud size={16} color="#E02041"/>
+                    <FaArrowRight size={16} color="#FF6E00"/>
                     Não tenho cadastro
                 </Link>
             </form>

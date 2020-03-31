@@ -4,6 +4,7 @@ import { FaArrowLeft } from 'react-icons/fa';
 import api from '../../services/api';
 
 import './styles.css';
+import logo from '../../assets/logo.png'
 
 export default function Logon() {
 
@@ -41,13 +42,13 @@ export default function Logon() {
         <div className="new-incident-container">
             <div className="content">
                 <section>
-                <img src="" alt="be the hero" />
+                <img src={logo} alt="be the hero" />
 
                 <h1>Cadastrar novo caso</h1>
                 <p>Descreva o caso detalhadamente para encontrar um herói para resolver isso.</p>
 
                 <Link className="back-link" to="/profile">
-                    <FaArrowLeft size={16} color="#E02041"/>
+                    <FaArrowLeft size={16} color="#FF6E00"/>
                     Voltar para home
                 </Link>
 

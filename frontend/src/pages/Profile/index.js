@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FaPowerOff, FaTrash } from 'react-icons/fa'
 
-// import LogoImg from '../../assets/'
+import LogoImg from '../../assets/logo.png'
 import './styles.css';
 import api from '../../services/api';
 
@@ -49,12 +49,12 @@ export default function Profile() {
     return (
         <div className="profile-container">
             <header>
-                <img src="" alt="Be The Hero" />
+                <img src={LogoImg} alt="Be The Hero" />
                 <span>Bem vinda, {ongName}</span>
 
                 <Link className="button" to="/incidents/new">Cadastrar novo caso</Link>
                 <button onClick={handleLogout} type="button">
-                    <FaPowerOff size={18} color="#E02041" />
+                    <FaPowerOff size={18} color="#FF6E00" />
                 </button>
 
             </header>
