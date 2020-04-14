@@ -5,8 +5,46 @@ const IncidentController = require('./controllers/IncidentController');
 const ProfileController = require('./controllers/ProfileController');
 const SessionController = require('./controllers/SessionController');
 const { celebrate, Segments, Joi } = require('celebrate');
+const nodemailer = require('nodemailer');
 
 const routes = express.Router();
+
+routes.get("/", (req, res) => {
+    res.send("Welcome");
+});
+
+routes.post(("/sendmail"), (req, res) => {
+    console.log("request came");
+
+    let user = req.body;
+    sendMail(user, info => {
+        console.log(`the mail has benn send and the id is ${info.messageId}`);
+        res.send(info);
+    });
+});
+
+async function sendMail(user, callback) {
+    let transporter = nodemailer.createTransport({
+        host: "smtp.gmail.com",
+        port: 587,
+        secure: false,
+        auth: {
+            user: details.email,
+            pass: details.password
+        }
+    });
+
+    let mailOptions = {
+        from: "hugo.carvalho.reis@gmail.com",
+        to: user.email,
+        subject: "welcome blabla",
+        html: `<h1>${user.name}</h1>`
+    };
+
+    let info = await transporter.sendMail(mailOptions);
+
+    callback(info);
+};
 
 routes.post('/sessions', SessionController.create)
 
