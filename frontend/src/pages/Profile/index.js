@@ -5,6 +5,7 @@ import { FaPowerOff, FaTrash } from 'react-icons/fa'
 import LogoImg from '../../assets/logo.png'
 import './styles.css';
 import api from '../../services/api';
+//
 
 export default function Profile() {
 
