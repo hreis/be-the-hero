@@ -150,7 +150,7 @@ yarn migrate:rollback
 To run the next migration that has not yet been run;
 
 ```
-knex migrate:up
+knex migrate:up 
 ```
 
 To undo the last migration that was run;
